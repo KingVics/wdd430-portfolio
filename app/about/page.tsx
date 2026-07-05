@@ -1,4 +1,21 @@
 import { Title } from '@/components/Title';
+import InfoCard from '@/components/InfoCard';
+
+const aboutCards = [
+  {
+    title: 'Strengths',
+    description: 'UI design, responsive layouts, clean code',
+  },
+  {
+    title: 'Goal',
+    description: 'Deliver projects that look polished and feel intuitive.',
+  },
+  {
+    title: 'Approach',
+    description:
+      'Build accessible experiences with thoughtful detail and clarity.',
+  },
+];
 
 export default function About() {
   return (
@@ -10,23 +27,14 @@ export default function About() {
           Next.js and React. I enjoy crafting user interfaces that are fast,
           accessible, and easy to maintain.
         </p>
-        <div className='mt-8 grid gap-4 sm:grid-cols-2'>
-          <div className='rounded-3xl border border-slate-800/80 bg-slate-950/80 p-5'>
-            <p className='text-sm uppercase tracking-[0.28em] text-slate-500'>
-              Strengths
-            </p>
-            <p className='mt-3 text-white font-semibold'>
-              UI design, responsive layouts, clean code
-            </p>
-          </div>
-          <div className='rounded-3xl border border-slate-800/80 bg-slate-950/80 p-5'>
-            <p className='text-sm uppercase tracking-[0.28em] text-slate-500'>
-              Goal
-            </p>
-            <p className='mt-3 text-white font-semibold'>
-              Deliver projects that look polished and feel intuitive.
-            </p>
-          </div>
+        <div className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+          {aboutCards.map((card) => (
+            <InfoCard
+              key={card.title}
+              title={card.title}
+              description={card.description}
+            />
+          ))}
         </div>
       </section>
     </main>
