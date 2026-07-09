@@ -9,6 +9,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className='scroll-smooth'>
+      <head>
+        <title>Sunday Victor - Portfolio</title>
+        <meta name="description" content='This is Sunday Victor Okoromi Portfolio'/>
+      </head>
       <body className='min-h-screen bg-slate-950 text-slate-100 antialiased'>
         <div className='flex min-h-screen flex-col'>
           <Header />
